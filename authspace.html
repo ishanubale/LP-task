@@ -102,49 +102,51 @@ window.lpTag._tagCount += 1;
 }
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Authenticated Space</title>
+<title>For Authenticated user</title>
 <style>
-body {
-font-family: Arial, sans-serif;
-background-color: #11c1d1;
-color: #333;
-margin: 0;
-padding: 20px;
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333;
+    margin: 0;
+    padding: 20px;
 }
 
 h1 {
-color: #0c791e;
+    color: #007bff; /* Blue heading */
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .container {
-margin: 20px;
-padding: 20px;
-border: 1px solid #ccc;
-background-color: #e7a8a8;
-border-radius: 5px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
 button {
-padding: 10px 20px;
-margin: 10px;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-background-color: #3f040e;
-color: white;
-font-size: 16px;
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-background-color: #dd1717;
+    background-color: #0056b3; /* Darker blue on hover */
 }
 </style>
 </head>
 <body>
 <div class="container">
-<h1>Hi there! Welcome to the LP Brand Bot - Authenticated</h1>
-<p>Thank you for logging in. We are here to help you.</p>
+<h1>Hi there! Welcome Back to LP Brand Bot - Authenticated Page</h1>
+<p>Welcome back! We're here to assist you.</p>
 <button id="logoutBtn">Log out</button>
 </div>
 
