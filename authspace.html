@@ -182,26 +182,26 @@ const cartTotalValue = 500; // Placeholder for cart total value, should be dynam
 window.lpTag = window.lpTag || {};
 window.lpTag.vars = window.lpTag.vars || [];
 
-// window.lpTag.sdes = window.lpTag.sdes || [];
-// window.lpTag.sdes.push({
-// "type": "cart",
-// "total": cartTotalValue,
-// "currency": "USD",
-// "numItems": 5
-// });
+window.lpTag.sdes = window.lpTag.sdes || [];
+window.lpTag.sdes.push({
+"type": "cart",
+"total": cartTotalValue,
+"currency": "USD",
+"numItems": 5
+});
 
-window.lpTag.sdes.push(
-  {
-    "type": "Personal Details", //MANDATORY
-    "products": [{ //ARRAY OF PRODUCTS
-      "product": {
-        "name": "Ishan Ubale", //PRODUCT NAME
-        "category": "General", //PRODUCT CATEGORY NAME
-        "sku": "10305020"
-      }
-    }]
-  }
-);
+// window.lpTag.sdes.push(
+//   {
+//     "type": "Personal Details", //MANDATORY
+//     "products": [{ //ARRAY OF PRODUCTS
+//       "product": {
+//         "name": "Ishan Ubale", //PRODUCT NAME
+//         "category": "General", //PRODUCT CATEGORY NAME
+//         "sku": "10305020"
+//       }
+//     }]
+//   }
+// );
 
 window.lpTag.vars.push({
 scope: 'page',
