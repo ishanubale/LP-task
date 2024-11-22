@@ -161,9 +161,16 @@ if (jwt) {
 // Pass the Bearer token to LivePerson using a custom variable
 window.lpTag = window.lpTag || {};
 window.lpTag.vars = window.lpTag.vars || [];
+    
+window.lpTag.vars.push({
+scope: 'session', // or 'page' depending on your use case
+name: 'bearerToken',
+value: jwt
+});
+
+console.log('Bearer token passed to LivePerson:', jwt);
 
 lpTag.identities = [];
-lpTag.identities.push(identityFn);
 
 function identityFn(callback) {
   // Fetch user information from your authentication system
@@ -179,13 +186,9 @@ function identityFn(callback) {
   });
 }
     
-window.lpTag.vars.push({
-scope: 'session', // or 'page' depending on your use case
-name: 'bearerToken',
-value: jwt
-});
+lpTag.identities.push(identityFn);
 
-console.log('Bearer token passed to LivePerson:', jwt);
+    
 } else {
 console.log('No Bearer token found. Redirecting to login page.');
 window.location.href = 'index.html';
