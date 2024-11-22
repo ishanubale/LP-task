@@ -183,23 +183,23 @@ const cartTotalValue = 5000; // Placeholder for cart total value, should be dyna
 window.lpTag = window.lpTag || {};
 window.lpTag.vars = window.lpTag.vars || [];
 
-lpTag.identities = [];
+// lpTag.identities = [];
 
-function identityFn(callback) {
-  // Fetch user information from your authentication system
-  // Replace the placeholders with your actual implementation
-  const userId = 1;
-  const userName = "Ishan Ubale";
-  const phoneNumber = 9898989898;
+// function identityFn(callback) {
+//   // Fetch user information from your authentication system
+//   // Replace the placeholders with your actual implementation
+//   const userId = 1;
+//   const userName = "Ishan Ubale";
+//   const phoneNumber = 9898989898;
 
-  callback({
-    id: userId,
-    name: userName,
-    phoneNumber: phoneNumber
-  });
-}
+//   callback({
+//     id: userId,
+//     name: userName,
+//     phoneNumber: phoneNumber
+//   });
+// }
     
-lpTag.identities.push(identityFn);
+// lpTag.identities.push(identityFn);
     
 window.lpTag.sdes = window.lpTag.sdes || [];
 window.lpTag.sdes.push({
