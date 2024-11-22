@@ -162,6 +162,23 @@ if (jwt) {
 window.lpTag = window.lpTag || {};
 window.lpTag.vars = window.lpTag.vars || [];
 
+lpTag.identities = [];
+lpTag.identities.push(identityFn);
+
+function identityFn(callback) {
+  // Fetch user information from your authentication system
+  // Replace the placeholders with your actual implementation
+  const userId = 1;
+  const userName = "Ishan Ubale";
+  const phoneNumber = 9898989898;
+
+  callback({
+    id: userId,
+    name: userName,
+    phoneNumber: phoneNumber
+  });
+}
+    
 window.lpTag.vars.push({
 scope: 'session', // or 'page' depending on your use case
 name: 'bearerToken',
@@ -189,19 +206,6 @@ window.lpTag.sdes.push({
 "currency": "USD",
 "numItems": 5
 });
-
-// window.lpTag.sdes.push(
-//   {
-//     "type": "Personal Details", //MANDATORY
-//     "products": [{ //ARRAY OF PRODUCTS
-//       "product": {
-//         "name": "Ishan Ubale", //PRODUCT NAME
-//         "category": "General", //PRODUCT CATEGORY NAME
-//         "sku": "10305020"
-//       }
-//     }]
-//   }
-// );
 
 window.lpTag.vars.push({
 scope: 'page',
