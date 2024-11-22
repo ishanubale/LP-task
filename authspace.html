@@ -176,7 +176,7 @@ window.location.href = 'index.html';
 
 // Capture current page title and cart total value
 const pageTitle = document.title;
-const cartTotalValue = 50556; // Placeholder for cart total value, should be dynamically fetched
+const cartTotalValue = 500; // Placeholder for cart total value, should be dynamically fetched
 
 // Initialize LivePerson settings and send SDEs
 window.lpTag = window.lpTag || {};
@@ -195,6 +195,19 @@ scope: 'page',
 name: 'pageTitle',
 value: pageTitle
 });
+
+window.lpTag.sdes.push(
+  {
+    "type": "Personal Details", //MANDATORY
+    "products": [{ //ARRAY OF PRODUCTS
+      "product": {
+        "name": "Ishan Ubale", //PRODUCT NAME
+        "category": "General", //PRODUCT CATEGORY NAME
+        "sku": "10305020"
+      }
+    }]
+  }
+);
 
 window.lpTag.vars.push({
 scope: 'page',
