@@ -182,19 +182,13 @@ const cartTotalValue = 500; // Placeholder for cart total value, should be dynam
 window.lpTag = window.lpTag || {};
 window.lpTag.vars = window.lpTag.vars || [];
 
-window.lpTag.sdes = window.lpTag.sdes || [];
-window.lpTag.sdes.push({
-"type": "cart",
-"total": cartTotalValue,
-"currency": "USD",
-"numItems": 5
-});
-
-window.lpTag.vars.push({
-scope: 'page',
-name: 'pageTitle',
-value: pageTitle
-});
+// window.lpTag.sdes = window.lpTag.sdes || [];
+// window.lpTag.sdes.push({
+// "type": "cart",
+// "total": cartTotalValue,
+// "currency": "USD",
+// "numItems": 5
+// });
 
 window.lpTag.sdes.push(
   {
@@ -208,6 +202,12 @@ window.lpTag.sdes.push(
     }]
   }
 );
+
+window.lpTag.vars.push({
+scope: 'page',
+name: 'pageTitle',
+value: pageTitle
+});
 
 window.lpTag.vars.push({
 scope: 'page',
