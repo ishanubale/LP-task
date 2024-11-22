@@ -169,6 +169,19 @@ value: jwt
 });
 
 console.log('Bearer token passed to LivePerson:', jwt);
+    
+} else {
+console.log('No Bearer token found. Redirecting to login page.');
+window.location.href = 'index.html';
+}
+
+// Capture current page title and cart total value
+const pageTitle = document.title;
+const cartTotalValue = 5000; // Placeholder for cart total value, should be dynamically fetched
+
+// Initialize LivePerson settings and send SDEs
+window.lpTag = window.lpTag || {};
+window.lpTag.vars = window.lpTag.vars || [];
 
 lpTag.identities = [];
 
@@ -187,21 +200,7 @@ function identityFn(callback) {
 }
     
 lpTag.identities.push(identityFn);
-
     
-} else {
-console.log('No Bearer token found. Redirecting to login page.');
-window.location.href = 'index.html';
-}
-
-// Capture current page title and cart total value
-const pageTitle = document.title;
-const cartTotalValue = 500; // Placeholder for cart total value, should be dynamically fetched
-
-// Initialize LivePerson settings and send SDEs
-window.lpTag = window.lpTag || {};
-window.lpTag.vars = window.lpTag.vars || [];
-
 window.lpTag.sdes = window.lpTag.sdes || [];
 window.lpTag.sdes.push({
 "type": "cart",
